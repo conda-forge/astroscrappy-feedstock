@@ -20,15 +20,13 @@ requirements:
     - setuptools
     - astropy
     - cython
-    - numpy x.x
-    - numpy >=1.9
+    - numpy 1.11.*
     - toolchain
 
   run:
     - python
     - astropy
-    - numpy x.x
-    - numpy >=1.9
+    - numpy >=1.11
 
 test:
   # Python imports
