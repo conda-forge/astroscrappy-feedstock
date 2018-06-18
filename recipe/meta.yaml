@@ -16,6 +16,9 @@ build:
 
 requirements:
   build:
+    - {{ pin_compatible('numpy') }}
+    - {{ compiler('c') }}
+  host:
     - {{ compiler('c') }}
   host:
     - python
@@ -27,7 +30,6 @@ requirements:
   run:
     - python
     - astropy
-    - {{ pin_compatible('numpy') }}
 
 test:
   # Python imports
