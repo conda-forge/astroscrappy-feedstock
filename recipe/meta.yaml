@@ -16,17 +16,20 @@ build:
 
 requirements:
   build:
+    - {{ pin_compatible('numpy') }}
+    - {{ compiler('c') }}
+  host:
+    - {{ compiler('c') }}
+  host:
     - python
     - setuptools
     - astropy
     - cython
-    - numpy 1.11.*
-    - toolchain
+    - numpy
 
   run:
     - python
     - astropy
-    - numpy >=1.11
 
 test:
   # Python imports
