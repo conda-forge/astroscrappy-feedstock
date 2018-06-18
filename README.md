@@ -17,14 +17,16 @@ algorithm.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/astroscrappy-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/astroscrappy-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/astroscrappy-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/astroscrappy-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/astroscrappy-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/astroscrappy-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/astroscrappy-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/astroscrappy-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/astroscrappy-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/astroscrappy-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/astroscrappy-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/astroscrappy-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/astroscrappy/badges/version.svg)](https://anaconda.org/conda-forge/astroscrappy)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/astroscrappy/badges/downloads.svg)](https://anaconda.org/conda-forge/astroscrappy)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-astroscrappy-green.svg)](https://anaconda.org/conda-forge/astroscrappy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/astroscrappy.svg)](https://anaconda.org/conda-forge/astroscrappy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/astroscrappy.svg)](https://anaconda.org/conda-forge/astroscrappy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/astroscrappy.svg)](https://anaconda.org/conda-forge/astroscrappy) |
 
 Installing astroscrappy
 =======================
