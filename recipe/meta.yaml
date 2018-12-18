@@ -1,6 +1,6 @@
 {% set name = "astroscrappy" %}
-{% set version = "1.0.5" %}
-{% set md5 = "e7ec5d829191226e6092b08e1d8f4cd4" %}
+{% set version = "1.0.8" %}
+{% set md5 = "eb68a7c81ea8d4370eab66e9c7859576" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   md5: {{ md5 }}
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
