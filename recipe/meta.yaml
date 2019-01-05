@@ -1,6 +1,5 @@
 {% set name = "astroscrappy" %}
 {% set version = "1.0.8" %}
-{% set md5 = "eb68a7c81ea8d4370eab66e9c7859576" %}
 
 package:
   name: {{ name|lower }}
@@ -9,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  md5: {{ md5 }}
+  sha256: 5480d7ff87eb3aaf400f8fde389a299f21a3b7fff4c1ba4c0795a09fbbad5f71
 
 build:
-  number: 0
+  number: 1001
 
 requirements:
   build:
@@ -22,12 +21,15 @@ requirements:
     - setuptools
     - astropy
     - cython
-    - numpy
-
+    - numpy 1.13.*  # [py35]
+    - numpy 1.13.*  # [py36]
+    - numpy 1.14.*  # [py>=37]
   run:
     - python
     - astropy
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.13.*  # [py35]
+    - numpy >=1.13.*  # [py36]
+    - numpy >=1.14.*  # [py>=37]
 
 test:
   # Python imports
