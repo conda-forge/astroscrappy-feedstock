@@ -9,16 +9,19 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 5480d7ff87eb3aaf400f8fde389a299f21a3b7fff4c1ba4c0795a09fbbad5f71
+  patches:
+    - setup.cfg.patch
 
 build:
-  number: 1001
+  number: 1002
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools
+    - pip
     - astropy
     - cython
     - numpy 1.13.*  # [py35]
@@ -40,7 +43,7 @@ test:
 
 about:
   home: https://github.com/astropy/astroscrappy
-  license: BSD 3-clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: licenses/LICENSE.rst
   summary: 'Speedy Cosmic Ray Annihilation Package in Python'
