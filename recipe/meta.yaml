@@ -21,7 +21,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools
+    - pip
     - astropy
     - cython
     - numpy 1.13.*  # [py35]
