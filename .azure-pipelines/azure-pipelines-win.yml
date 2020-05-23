@@ -9,13 +9,13 @@ jobs:
   strategy:
     matrix:
       win_python3.6:
-        CONFIG: win_python3.6
+        CONFIG: win_python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
       win_python3.7:
-        CONFIG: win_python3.7
+        CONFIG: win_python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
       win_python3.8:
-        CONFIG: win_python3.8
+        CONFIG: win_python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
     maxParallel: 4
   timeoutInMinutes: 360
@@ -79,7 +79,7 @@ jobs:
         call activate base
         run_conda_forge_build_setup
       displayName: conda-forge build setup
-    
+
 
     # Special cased version setting some more things!
     - script: |
