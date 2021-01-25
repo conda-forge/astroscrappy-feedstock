@@ -24,18 +24,11 @@ requirements:
     - pip
     - astropy
     - cython >=0.29.21
-    - numpy =1.13.*  # [py36]
-    - numpy =1.14.*  # [py37]
-    - numpy =1.14.*  # [py37]
-    - numpy =1.17.3  # [py38]
-    - numpy =1.19.3  # [py>=39]
+    - numpy
   run:
     - python
     - astropy
-    - numpy >=1.13.*  # [py36]
-    - numpy >=1.14.*  # [py37]
-    - numpy >=1.17.3  # [py38]
-    - numpy >=1.19.3  # [py>=39]
+    - {{ pin_compatible('numpy') }}
 
 test:
   # Python imports
