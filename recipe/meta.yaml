@@ -13,7 +13,7 @@ source:
     - setup.cfg.patch
 
 build:
-  number: 1002
+  number: 1003
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -23,16 +23,12 @@ requirements:
     - python
     - pip
     - astropy
-    - cython
-    - numpy 1.13.*  # [py35]
-    - numpy 1.13.*  # [py36]
-    - numpy 1.14.*  # [py>=37]
+    - cython >=0.29.21
+    - numpy
   run:
     - python
     - astropy
-    - numpy >=1.13.*  # [py35]
-    - numpy >=1.13.*  # [py36]
-    - numpy >=1.14.*  # [py>=37]
+    - {{ pin_compatible('numpy') }}
 
 test:
   # Python imports
