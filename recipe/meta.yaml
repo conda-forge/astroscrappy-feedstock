@@ -23,7 +23,7 @@ requirements:
     - python
     - pip
     - astropy
-    - cython >=0.29.21
+    - cython >=0.29.22,<3
     - numpy
   run:
     - python
