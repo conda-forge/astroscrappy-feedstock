@@ -13,8 +13,8 @@ source:
     - setup.cfg.patch
 
 build:
-  number: 1003
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1004
+  script: cython astroscrappy/astroscrappy.pyx astroscrappy/utils/median_utils.pyx astroscrappy/utils/image_utils.pyx && {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -23,7 +23,7 @@ requirements:
     - python
     - pip
     - astropy
-    - cython >=0.29.21
+    - cython >=0.29.22,<3
     - numpy
   run:
     - python
