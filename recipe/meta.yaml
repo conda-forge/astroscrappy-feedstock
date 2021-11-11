@@ -13,7 +13,7 @@ source:
     - setup.cfg.patch
 
 build:
-  number: 1004
+  number: 1005
   script: cython astroscrappy/astroscrappy.pyx astroscrappy/utils/median_utils.pyx astroscrappy/utils/image_utils.pyx && {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
