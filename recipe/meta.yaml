@@ -23,6 +23,7 @@ requirements:
     - astropy
     - cython >=0.29.22,<3
     - numpy
+    - extension-helpers
   run:
     - python
     - astropy
