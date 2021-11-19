@@ -9,12 +9,10 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7e196c7ce839b4b2fa8ddba8f75c1a1ee45ff1247d01e8c8e7b4debf6974156a
-  patches:
-    - setup.cfg.patch
 
 build:
   number: 0
-  script: cython astroscrappy/astroscrappy.pyx astroscrappy/utils/median_utils.pyx astroscrappy/utils/image_utils.pyx && {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
