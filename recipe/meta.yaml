@@ -23,7 +23,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - pip
+    - pip !=22.1
     - astropy
     - cython >=0.29.22,<3
     - numpy
