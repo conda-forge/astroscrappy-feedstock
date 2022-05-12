@@ -12,18 +12,23 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - python
-    - pip
+    - pip !=22.1
     - astropy
     - cython >=0.29.22,<3
     - numpy
     - extension-helpers
+    - setuptools_scm
   run:
     - python
     - astropy
