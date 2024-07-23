@@ -10,7 +10,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: cea1ae2199893b6c1cb2f9b646d8e215f1bf06f1266f2da70f40e41ad1a34a64
   patches:
-    - astroscrappy.c.patch
+    - astroscrappy.pyx.patch
 
 build:
   number: 0

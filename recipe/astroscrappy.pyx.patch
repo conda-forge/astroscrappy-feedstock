@@ -1,0 +1,12 @@
+diff --git a/astroscrappy/astroscrappy.pyx b/astroscrappy/astroscrappy.pyx
+index 4675f03..ec063e6 100644
+--- a/astroscrappy/astroscrappy.pyx
++++ b/astroscrappy/astroscrappy.pyx
+@@ -182,6 +182,7 @@ def detect_cosmics(indat, inmask=None, inbkg=None, invar=None, float sigclip=4.5
+     the variance that is in addition to the Poisson contribution from the background so that we do
+     not underestimate the noise (and therefore run the risk of flagging false positives) near narrow, bright
+     sky lines.
++
+     """
+ 
+     # Grab the sizes of the input array
