@@ -20,7 +20,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     # numpy 1.25 introduced the backwards compatible ABI
-    - numpy                                  # [build_platform != target_platform]
+    - numpy >=1.25                           # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
@@ -29,7 +29,7 @@ requirements:
     - astropy
     - cython >=3.0,<4.0a0
     # numpy 1.25 introduced the backwards compatible ABI
-    - numpy
+    - numpy >=1.25
     - extension-helpers
     - setuptools_scm
   run:
