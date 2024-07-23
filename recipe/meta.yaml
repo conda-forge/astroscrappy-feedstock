@@ -11,8 +11,9 @@ source:
   sha256: 7e196c7ce839b4b2fa8ddba8f75c1a1ee45ff1247d01e8c8e7b4debf6974156a
 
 build:
-  number: 3
+  number: 4
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  skip: true  # [py<39]
 
 requirements:
   build:
@@ -20,7 +21,8 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     # numpy 1.25 introduced the backwards compatible ABI
-    - numpy                                  # [build_platform != target_platform]
+    - numpy >=1.25 ,<2                        # [build_platform != target_platform and py<310]
+    - numpy >=2.0                            # [build_platform != target_platform and py>=310]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
@@ -29,7 +31,8 @@ requirements:
     - astropy
     - cython >=3.0,<4.0a0
     # numpy 1.25 introduced the backwards compatible ABI
-    - numpy
+    - numpy >=1.25,<2                           # [py<310]
+    - numpy >=2.0                            # [py>=310]
     - extension-helpers
     - setuptools_scm
   run:
