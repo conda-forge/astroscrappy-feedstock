@@ -31,6 +31,7 @@ requirements:
   host:
     - python
     - pip !=22.1
+    - setuptools
     - astropy
     - cython >=3.0,<4.0a0
     # numpy 1.25 introduced the backwards compatible ABI
