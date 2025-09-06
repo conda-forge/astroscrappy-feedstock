@@ -7,14 +7,14 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: cea1ae2199893b6c1cb2f9b646d8e215f1bf06f1266f2da70f40e41ad1a34a64
   patches:
     # This patch is only needed to force cythonizing astroscrappy.pyx
     - astroscrappy.pyx.patch  # [osx and py==39]
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [py<39]
 
@@ -24,7 +24,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     # numpy 1.25 introduced the backwards compatible ABI
-    - numpy >=1.25 ,<2                        # [build_platform != target_platform and py<310]
+    - numpy >=1.25,<2                        # [build_platform != target_platform and py<310]
     - numpy >=2.0                            # [build_platform != target_platform and py>=310]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
@@ -32,7 +32,7 @@ requirements:
     - python
     - pip !=22.1
     - setuptools
-    - astropy
+    - astropy-base
     - cython >=3.0,<4.0a0
     # numpy 1.25 introduced the backwards compatible ABI
     - numpy >=1.25,<2                           # [py<310]
@@ -41,7 +41,7 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - astropy
+    - astropy-base
     - numpy >=1.23
 
 test:
